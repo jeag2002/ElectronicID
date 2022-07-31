@@ -83,7 +83,9 @@ public class WebMockTemperatureEvaluatorControllerTest {
         )
         .andExpect(status().isOk())
         .andExpect(MockMvcResultMatchers.jsonPath("$.maxDiff").value("0"));
-
+    Mockito.verify(requestConversor).convert(request);
+    Mockito.verify(service).temperatureDiff(requestBean);
+    Mockito.verify(responseConversor).convert(Mockito.anyInt());
   }
   
   
