@@ -7,14 +7,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.edirectory.service.beans.TemperatureEvaluatorBean;
 import com.edirectory.service.helper.TemperatureEvaluatorHelper;
 import com.edirectory.service.impl.TemperatureEvaluatorImpl;
+import com.edirectory.validator.impl.TemperatureValidatorImpl;
 import java.util.ArrayList;
 import java.util.Arrays;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 /** TemperatureEvaluatorImplTest. */
@@ -23,9 +26,21 @@ public class TemperatureEvaluatorImplTest {
 
   @InjectMocks
   private TemperatureEvaluatorImpl temperatureEvaluatorImpl;
-    
+  
+  @Spy
+  private TemperatureValidatorImpl validator;
+  
   @Mock
   private TemperatureEvaluatorHelper helper;
+  
+  /**
+   * setUp Variables.
+   */
+  @BeforeEach
+  public void setUp() {
+    validator = new TemperatureValidatorImpl();
+  }
+
   
   @DisplayName("Temperature Evaluator Service with normal data")
   @Test
@@ -45,7 +60,6 @@ public class TemperatureEvaluatorImplTest {
     ArrayList<Integer> inputData = null;
     TemperatureEvaluatorBean ibean = new TemperatureEvaluatorBean();
     ibean.setInputTemperatures(inputData);    
-
     Exception exception = assertThrows(NullPointerException.class, () -> {
       temperatureEvaluatorImpl.temperatureDiff(ibean);
     });
@@ -61,7 +75,6 @@ public class TemperatureEvaluatorImplTest {
   @Test
   public void temperatureEvaluatorWithNullObject() {
     TemperatureEvaluatorBean ibean = null;
-
     Exception exception = assertThrows(NullPointerException.class, () -> {
       temperatureEvaluatorImpl.temperatureDiff(ibean);
     });

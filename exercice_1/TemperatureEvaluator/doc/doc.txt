@@ -9,3 +9,5 @@ http://localhost:8080/v3/api-docs/
 https://www.geeksforgeeks.org/maximum-difference-between-two-elements/
 
 https://www.javainuse.com/spring/springboot_testcases
+
+https://pitest.org/quickstart/maven/

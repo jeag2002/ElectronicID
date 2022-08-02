@@ -47,6 +47,40 @@
   
   <build>
     <plugins>
+      <!-- MUTABILITY TEST ENGINE -->
+      <!--
+      <plugin>
+		<groupId>org.pitest</groupId>
+		<artifactId>pitest-maven</artifactId>
+		<version>1.7.4</version>
+
+		<executions>
+			<execution>
+				<id>pit-report</id>
+				<phase>test</phase>
+				<goals>
+					<goal>mutationCoverage</goal>
+				</goals>
+			</execution>
+		</executions>
+
+		<dependencies>
+			<dependency>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-junit5-plugin</artifactId>
+				<version>0.8</version>
+			</dependency>
+		</dependencies>
+		<configuration>
+			<targetClasses>
+				<param>com.edirectory.*</param>
+			</targetClasses>
+			<targetTests>
+				<param>com.edirectory.*</param>
+			</targetTests>
+		</configuration>
+      </plugin>
+      -->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
@@ -117,9 +151,8 @@
               </descriptorRefs>
               
             </configuration>
-       </plugin>   
+       </plugin>  
        
-        
     </plugins>
 
   

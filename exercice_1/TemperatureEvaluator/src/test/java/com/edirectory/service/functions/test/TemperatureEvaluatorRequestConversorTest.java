@@ -7,14 +7,24 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.edirectory.rest.beans.TemperatureEvaluatorRequest;
 import com.edirectory.service.beans.TemperatureEvaluatorBean;
 import com.edirectory.service.functions.TemperatureEvaluatorRequestConversor;
+import com.edirectory.validator.impl.TemperatureValidatorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Spy;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 /** TemperatureEvaluatorRequestConversorTest. */
+@ExtendWith(MockitoExtension.class)
 public class TemperatureEvaluatorRequestConversorTest {
 
+  @InjectMocks
   private TemperatureEvaluatorRequestConversor temperatureEvaluatorRequestConversor;
+  
+  @Spy
+  private TemperatureValidatorImpl temperatureValidator;
   
   private TemperatureEvaluatorRequest reqValid;
   private TemperatureEvaluatorRequest reqNullArray;
@@ -24,7 +34,8 @@ public class TemperatureEvaluatorRequestConversorTest {
   /** Process setup. */
   @BeforeEach
   public void setUp() {
-    temperatureEvaluatorRequestConversor = new TemperatureEvaluatorRequestConversor();
+    
+    temperatureValidator = new TemperatureValidatorImpl();
     
     reqValid = new TemperatureEvaluatorRequest();
     reqValid.setReadings(new Integer[]{1, 2, 3, 4});
