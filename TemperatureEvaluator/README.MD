@@ -49,4 +49,4 @@ desarrollado.
 - Open a browser and access to the following URL "http://localhost:8080/swagger-ui/index.html"
 
 - You can see this. 
-![alt text](https://github.com/jeag2002/ElectronicID/TemperatureEvaluator/master/openapi.png?raw=true)
+![alt text](https://github.com/jeag2002/ElectronicID/tree/master/TemperatureEvaluator/openapi.png?raw=true)
