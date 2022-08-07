@@ -16,7 +16,7 @@ altamente concurrente y deberá soportar un gran número de usuarios en situacio
 (campañas promocionales, etc.).
 Esboce, de manera general, un posible diseño para este sistema
 
-##Resolution
+## Resolution:
 
 Una propuesta de diseño se puede ver en la siguiente imagen
 
@@ -24,7 +24,8 @@ Una propuesta de diseño se puede ver en la siguiente imagen
 
 En la que se pueden las diferentes etapas:
 
-- Etapa Captura/Preproceso Automático de Video
+- Etapa Captura/Preproceso Automático de Video:
+
 * Registro Datos simples del Usuario 1 (datos personales, información de contacto, etc)
 * Captura Video Carnet de conducir/Cara del usuario(Recogido en un servidor RTP/RTPC).
 * Proceso Imagen a Imagen del video capturado.
@@ -35,11 +36,13 @@ En la que se pueden las diferentes etapas:
 ** Resultados despues de todo el proceso e identificación automático. 
 
 - Etapa Validación Automática:
+
 * En el portal de los operadores, se recibe una nueva notificación de que un nuevo usuario ha solicitado ingreso.
 * Un operador recoge un ticket asociado al usuario 1, lo abre, revisa toda la información recogida en la etapa anterior y da su veredicto.
 * Registra este veredicto en portal.
 
 - Etapa Resolución:
+
 * Un motor recoge todas las peticiones solucionadas, y envia su veredicto al usuario.
 ** Si el veredicto es positivo, el usuario recibirá las credenciales para entrar en el sistema
 ** Si el veredicto es negativo, el usuario recibirá un aviso de que su petición ha sido rechazada y el motivo por el cual ha sido rechazado.
