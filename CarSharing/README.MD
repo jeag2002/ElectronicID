@@ -31,9 +31,9 @@ En la que se pueden las diferentes etapas:
 * Proceso Imagen a Imagen del video capturado.
 * Identificación Imagen a Imagen del video capturado.
 * Almacenamiento de: 
- * Datos iniciales del usuario.
- * Video carnet de conducir + Cara del usuario.
- * Resultados despues de todo el proceso e identificación automático. 
+  * Datos iniciales del usuario.
+  * Video carnet de conducir + Cara del usuario.
+  * Resultados despues de todo el proceso e identificación automático. 
 
 ### Etapa Validación Automática:
 
@@ -44,6 +44,6 @@ En la que se pueden las diferentes etapas:
 ### Etapa Resolución:
 
 * Un motor recoge todas las peticiones solucionadas, y envia su veredicto al usuario.
- * Si el veredicto es positivo, el usuario recibirá las credenciales para entrar en el sistema
- * Si el veredicto es negativo, el usuario recibirá un aviso de que su petición ha sido rechazada y el motivo por el cual ha sido rechazado.
+  * Si el veredicto es positivo, el usuario recibirá las credenciales para entrar en el sistema
+  * Si el veredicto es negativo, el usuario recibirá un aviso de que su petición ha sido rechazada y el motivo por el cual ha sido rechazado.
 * Usuario 1 recibe a través del canal de contacto que ha insertado previamente, el resultado de su petición. 
