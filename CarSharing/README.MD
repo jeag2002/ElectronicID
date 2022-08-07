@@ -1,4 +1,4 @@
-### CARSHARING
+# CARSHARING
 
 Design/Architecture exercice
 
@@ -24,7 +24,7 @@ Una propuesta de diseño se puede ver en la siguiente imagen
 
 En la que se pueden las diferentes etapas:
 
-# Etapa Captura/Preproceso Automático de Video:
+### Etapa Captura/Preproceso Automático de Video:
 
 * Registro Datos simples del Usuario 1 (datos personales, información de contacto, etc)
 * Captura Video Carnet de conducir/Cara del usuario(Recogido en un servidor RTP/RTPC).
@@ -35,13 +35,13 @@ En la que se pueden las diferentes etapas:
  * Video carnet de conducir + Cara del usuario.
  * Resultados despues de todo el proceso e identificación automático. 
 
-# Etapa Validación Automática:
+### Etapa Validación Automática:
 
 * En el portal de los operadores, se recibe una nueva notificación de que un nuevo usuario ha solicitado ingreso.
 * Un operador recoge un ticket asociado al usuario 1, lo abre, revisa toda la información recogida en la etapa anterior y da su veredicto.
 * Registra este veredicto en portal.
 
-# Etapa Resolución:
+### Etapa Resolución:
 
 * Un motor recoge todas las peticiones solucionadas, y envia su veredicto al usuario.
  * Si el veredicto es positivo, el usuario recibirá las credenciales para entrar en el sistema
