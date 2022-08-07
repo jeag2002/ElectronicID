@@ -50,14 +50,14 @@ En la que se pueden las diferentes etapas:
 
 ## Implementation:
 
-La propuesta de arquitectura se ha pensado que sea modular con el objetivo que sea escalable y facil de integrar en clusters; ya sea en servidores propios o en la nube.
+La propuesta de arquitectura se ha pensado que sea modular con el objetivo que sea escalable y fácil de integrar en clusters; ya sea en servidores propios o en la nube.
 
 * Para el servidor de streaming RTC/RTCP se puede plantear un servidor netty con soporte de protocolo streaming capaz de capturar video en tiempo real.
 
 * Para los diferentes servidores de proceso de imagen/machine learning; se podría pensar en procesos python (es un lenguaje propicio para estos menesteres) trabajando 
 en paralelo.
 
-* El servidor de "Simple Data Registration Engine"; seria un servidor encargado de almacenar los datos del usuario más el video en formato raw en una base de datos, asociado
+* El servidor de "Simple Data Registration Engine"; sería un servidor encargado de almacenar los datos del usuario más el video en formato raw en una base de datos, asociado
 a un identificador (Por ejemplo un Back End java basado en SpringBoot; que publicase una API restful donde el usuario registrase sus datos).
 
 * Es importante delimitar tanto el estándar de calidad que se quiere para este video; así como la duración del mismo. Estos dos parámetros son esenciales en todo el 
